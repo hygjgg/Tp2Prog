@@ -8,7 +8,20 @@ public class Profesor {
         this.materiasAsignadas = new ListaEnlazada();
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
     public void asignarMateria(Materia m) {
         materiasAsignadas.agregar(m);
+    }
+
+    public ListaEnlazada getMateriasAsignadas() {
+        return materiasAsignadas;
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
     }
 }
