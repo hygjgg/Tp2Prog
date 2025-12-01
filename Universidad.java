@@ -21,4 +21,32 @@ public class Universidad {
     public void agregarMateria(Materia m) {
         materias.agregar(m);
     }
+
+    public Estudiante buscarEstudianteBinario(String nombreBuscado) {
+
+    Object[] array = estudiantes.convertirAArray();
+
+    // Ordenar array antes de buscar (ej: por nombre)
+    Arrays.sort(array, (a, b) -> 
+        ((Estudiante) a).getNombre().compareTo(((Estudiante) b).getNombre())
+    );
+
+    int inicio = 0;
+    int fin = array.length - 1;
+
+    while (inicio <= fin) {
+        int mid = (inicio + fin) / 2;
+
+        Estudiante aux = (Estudiante) array[mid];
+        int comp = aux.getNombre().compareTo(nombreBuscado);
+
+        if (comp == 0)
+            return aux;
+        else if (comp < 0)
+            inicio = mid + 1;
+        else
+            fin = mid - 1;
+    }
+    return null;
+    }
 }
