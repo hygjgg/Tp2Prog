@@ -49,4 +49,18 @@ public class Universidad {
     }
     return null;
     }
+
+    public void ordenarEstudiantesPorNombre() {
+
+    // Convertir lista → array
+    Object[] arr = estudiantes.convertirAArray();
+
+    // Ordenar por nombre
+    Arrays.sort(arr, (a, b) ->
+        ((Estudiante) a).getNombre().compareTo(((Estudiante) b).getNombre())
+    );
+
+    // Convertir array → lista
+    estudiantes = ListaEnlazada.convertirArrayALista(arr);
+    }
 }
