@@ -2,23 +2,31 @@ Diferencias arrays vs listas enlazadas
 
  Arrays
 
-Ventajas	                  Desventajas
+Ventajas	                  
 
-Acceso directo por índice	  Tamaño fijo
-Fáciles de ordenar	        Insertar es costoso (mover elementos)
-Fáciles de recorrer	        Eliminar requiere correr elementos
+Acceso directo por índice
+Fáciles de ordenar	       
+Fáciles de recorrer	       
 
+Desventajas
+
+Tamaño fijo, insertar es costoso (mover elementos) y eliminar
+requiere correr elementos
 
 
 
  Listas Enlazadas
 
-Ventajas	                    Desventajas
+Ventajas	                   
 
-Insertar y eliminar es O(1)	  No hay acceso directo (O(n))
-Crecen dinámicamente	        No sirven para búsqueda binaria directa
-Mínimo uso de memoria	        Recorrer es más lento que array
+Insertar y eliminar es O(1)	  
+Crecen dinámicamente	        
+Mínimo uso de memoria	        
 
+Desventajas
+
+No hay acceso directo (O(n)), no sirven para búsqueda binaria directa
+y Recorrer es más lento que array
 
 
 6. Ventajas y desventajas de usar listas en este TP
